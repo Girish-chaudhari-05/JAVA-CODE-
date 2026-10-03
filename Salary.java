@@ -1,26 +1,26 @@
-/* Q44. Write a Java program to calculate gross salary based on basic salary conditions.
- Input : Basic Salary = 18000
- Output : Gross Salary = 34650
- Explanation : HRA and DA percentages are applied based on salary slab.
- */
- import java.util.*;
+import java.util.Scanner;
 
-class Salary {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Basic Salary:");
-        int basic = sc.nextInt();
+public class Salary{
 
-        double hra = (basic <= 10000) ? basic * 0.20 :
-                     (basic <= 20000) ? basic * 0.25 :
-                                        basic * 0.30;
+public static void main(String args[]){
 
-        double da = (basic <= 10000) ? basic * 0.80 :
-                    (basic <= 20000) ? basic * 0.90 :
-                                       basic * 0.95;
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter a service");
+int a = sc.nextInt();
 
-        double gross = basic + hra + da;
+System.out.println("Enter a salary");
+int b = sc.nextInt();
+    
+	 if(a>=5){
+	    int c = ((b * 5) /100)+ b;
+        System.out.println("You are eligible for bonus " + c);		
+	 }else{
+	   System.out.println("you are not eligible for bonus");
+	 
+	 }
 
-        System.out.println("Gross Salary = " + gross);
-    }
+
+
+}
+
 }
